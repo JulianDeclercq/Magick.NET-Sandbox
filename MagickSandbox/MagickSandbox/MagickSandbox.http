@@ -2,5 +2,3 @@
 
 GET {{MagickSandbox_HostAddress}}/
 Accept: application/json
-
-###

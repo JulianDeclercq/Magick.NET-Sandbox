@@ -5,5 +5,5 @@ builder.WebHost.UseUrls("http://0.0.0.0:8080");
 builder.Services.AddControllers();
 
 var app = builder.Build();
-app.MapControllers();
+app.MapGet("/", () => "Hello there");
 app.Run();
