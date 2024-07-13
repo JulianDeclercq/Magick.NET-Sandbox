@@ -14,5 +14,10 @@ The library `libresolv.so.2` is missing.
 # Solution
 Adding `libc6-compat` to the Alpine system provided the missing `libresolv.so.2` library that Magick.NET needed. This package emulates the environment expected by applications developed for glibc-based systems, allowing them to run on musl libc-based Alpine without modification.
 
+To add `libc6-compat`, add the following to the dockerfile
+```
+RUN apk add --no-cache libc6-compat
+```
+
 ## libc6-compat
 The whole packages page for [official alpine linux](https://www.alpinelinux.org/about/) seems to be offline at the date of writing (11th May 2024), but google had it indexed. The package size is **1.65kB**.
